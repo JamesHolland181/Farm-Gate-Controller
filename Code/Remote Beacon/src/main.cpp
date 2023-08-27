@@ -123,13 +123,13 @@ void loop() {
     }
 
     // Send message via ESP-NOW
-    // if(msg_sent != true)
-    // {
+    if(msg_sent != true)
+    {
       Serial.println("Command Sent");
       esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &myData, sizeof(myData));  
       myData.toggle=0; // reset flag
       msg_sent = true;
-    // }
+    }
     delay(2000);
   }
 

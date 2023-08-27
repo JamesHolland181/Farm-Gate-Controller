@@ -17,12 +17,12 @@ const boolean DEBUG_ONCE = true;
 
 const int threshold = 5; // Amps
 
+float averageSensorValue =0;
+int sensorValue ;
+float voltage, current;
+
 float getCurrent()
 {
-
-    float averageSensorValue =0;
-    int sensorValue ;
-    float voltage, current;
 
     for(int i=0; i< ITERATION; i++)
     {   
